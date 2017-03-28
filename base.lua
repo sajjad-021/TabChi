@@ -8,9 +8,7 @@ function vardump(value)
 end
 
 function reload()
-  tabchi = loadfile("tabchi.lua")
-end
-
+   tabchi = dofile("tabchi.lua")end
 function dl_cb (arg, data)
 end
 
