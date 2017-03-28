@@ -284,6 +284,7 @@ Help bot support version 4.3 decompile and edited
 Decompiled by @sajjad_021
 TeleGram channel @tgMember
 enjoy your bot! ]]
+				
 return tdcli.sendMessage(msg.chat_id_, 0, 1, text1, 1, "")
       elseif text_:match("^[!/#](remsudo) (%d+)") then
         local matches = {
