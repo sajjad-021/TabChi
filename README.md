@@ -18,7 +18,7 @@ TeleGram-CLI based broadcasting bot!
 
 ****
 
-##Install
+## Install
 To install everything in one command (useful for VPS deployment) on Debian-based distros, use:
 ```sh
 cd $home && git clone https://github.com/tgMember/TabChi.git && cd TabChi && chmod 777 install.sh && ./install.sh -y --force-yes && lua creator.lua
@@ -29,7 +29,7 @@ Enter Full Sudo ID : 123456
 Enter your telegram Id in "Full Sudo ID" part
 you can see your account Id Number in [@UserInfoBot](https://t.me/userinfobot)
 
-###Then
+### Then
 
 ```sh
 ./tabchi-0.sh
@@ -37,7 +37,7 @@ you can see your account Id Number in [@UserInfoBot](https://t.me/userinfobot)
 # Enter a phone number & confirmation code.
 ```
 
-##Create more bot
+## Create more bot
 run agin your server
 
 ```
