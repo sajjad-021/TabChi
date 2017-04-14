@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
 
-conf() {
+sudo apt-get install -y tor
+sudo apt-get install -y openvpn
+sudo apt-get install network-manager-openvpn
+sudo service tor start
+sudo service openvpn start
+export http_proxy="socks5://127.0.0.1:9150"
+export https_proxy="socks5://127.0.0.1:9150"
+export ftp_proxy="socks5://127.0.0.1:9150"
+wget https://valtman.name/files/telegram-cli-1222
+mv telegram-cli-1222 tg
+chmod +x tg
   declare -A logo
     seconds="0.003"
 logo[-1]=" ::::::::::  :::::::      ::     ::  ::::::::  ::     ::  ::::::  :::::::: ::::::  "
@@ -19,12 +29,8 @@ logo[5]="     ##      #######     ##       ## ######## ##       ## ####### #####
         printf "\n\t"
     done
 printf "\n"
-
 sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev tmux subversion
-
 sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean && sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev libevent-dev make unzip git redis-server g++ libjansson-dev libpython-dev expat libexpat1-dev tmux subversion -y
-
-cd TabChi
 sudo apt-get update 
 sudo apt-get upgrade
 sudo apt-get install libreadline-dev libssl-dev lua5.2 liblua5.2-dev git make unzip redis-server curl libcurl4-gnutls-dev
@@ -48,14 +54,6 @@ sudo apt-get install expat libexpat1-dev
 sudo apt-get update
 sudo apt-get upgrade
 sudo apt-get dist-upgrade
-sudo apt-get install -y tor
-sudo apt-get install -y openvpn
-sudo apt-get install network-manager-openvpn
-sudo service tor start
-sudo service openvpn start
-export http_proxy="socks5://127.0.0.1:9150"
-export https_proxy="socks5://127.0.0.1:9150"
-export ftp_proxy="socks5://127.0.0.1:9150"
   git clone https://github.com/vysheng/tg.git
   cd tg
     autoconf -i
@@ -85,9 +83,6 @@ cd luarocks-2.4.2
   ./bin/luarocks install xml
   ./bin/luarocks install feedparser
   ./bin/luarocks install serpent
-wget "https://valtman.name/files/telegram-cli-1222"
-mv telegram-cli-1222 tg
-chmod 777 tg
 sudo apt-get install libreadline-dev
 sudo apt install libreadline-dev 
 sudo apt-get install libreadline6 
@@ -143,20 +138,18 @@ sudo apt-get upgrade
 sudo apt-get dist-upgrade
 sudo ppa-purge
 sudo service redis-server restart
-sudo service tor start
-sudo service openvpn start
-export http_proxy="socks5://127.0.0.1:9150"
-export https_proxy="socks5://127.0.0.1:9150"
-export ftp_proxy="socks5://127.0.0.1:9150"
-}
+
 up() {
 cd $HOME && rm -rf .telegram-cli && rm -rf TabChi && rm -rf Tabchi && sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean && git clone https://github.com/tgMember/TabChi.git && cd TabChi && chmod 777 main.sh && ./main.sh conf && lua creator.lua
 }
 
-if [ "$1" = "conf" ]; then
-  conf
-  fi
 if [ "$1" = "up" ]; then
   up
 fi
+
+sudo service tor start
+sudo service openvpn start
+export http_proxy=socks5://127.0.0.1:9150
+export https_proxy=socks5://127.0.0.1:9150
+export ftp_proxy=socks5://127.0.0.1:9150
 
