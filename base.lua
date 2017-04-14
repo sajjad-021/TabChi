@@ -1,3 +1,6 @@
+serpent = (loadfile "serpent.lua")()
+tdcli = dofile('tdcli.lua')
+redis = (loadfile "redis.lua")()
 tabchi_id = "TABCHI-ID"
 
 function vardump(value)
@@ -5,14 +8,16 @@ function vardump(value)
 end
 
 function reload()
-   tabchi = dofile("bot.lua")end
+  loadfile("tabchi.lua")()
+end
+
 function dl_cb (arg, data)
 end
 
 reload()
 
 function tdcli_update_callback(data)
-  tabchi.update(data, tabchi_id)
+  update(data, tabchi_id)
   if data.message_ and data.message_.content_.text_ and data.message_.content_.text_ == "/reload" and data.message_.sender_user_id_ == tonumber(redis:get("tabchi:" .. tabchi_id ..":fullsudo")) then
     reload()
     tdcli.sendMessage(data.message_.chat_id_, 0, 1, "*Bot Reloaded*", 1, "md")
