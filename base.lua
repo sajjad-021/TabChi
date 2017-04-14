@@ -1,6 +1,3 @@
-serpent = (loadfile "serpent.lua")()
-tdcli = dofile('tdcli.lua')
-redis = (loadfile "redis.lua")()
 tabchi_id = "TABCHI-ID"
 
 function vardump(value)
@@ -8,7 +5,7 @@ function vardump(value)
 end
 
 function reload()
-   tabchi = dofile("tabchi.lua")end
+   tabchi = dofile("bot.lua")end
 function dl_cb (arg, data)
 end
 
