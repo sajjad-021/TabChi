@@ -20,3 +20,4 @@ io.open("tabchi-"..last..".sh",'w'):write("while true; do\n$(dirname $0)/tg -p t
 io.popen("chmod 777 tabchi-"..last..".sh")
 redis:set('tabchi:'..last..':fullsudo',sudo)
 print("Done!\nNew Tabchi Created...\nID : "..last.."\nFull Sudo : "..sudo.."\nRun : ./tabchi-"..last..".sh")
+print("Cracked Version 5 Of Tabchi By @sajjad_021 ;D - @tgMember ;o  Good Luck :D")
