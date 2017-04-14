@@ -140,7 +140,7 @@ sudo ppa-purge
 sudo service redis-server restart
 
 up() {
-cd $HOME && rm -rf .telegram-cli && rm -rf TabChi && rm -rf Tabchi && sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean && git clone https://github.com/tgMember/TabChi.git && cd TabChi && chmod 777 main.sh && ./main.sh conf && lua creator.lua
+cd $HOME && rm -rf .telegram-cli && rm -rf TabChi && rm -rf Tabchi && sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get autoremove && sudo apt-get autoclean && git clone https://github.com/tgMember/TabChi.git && cd TabChi && chmod 777 install.sh && ./install.sh && lua creator.lua
 }
 
 if [ "$1" = "up" ]; then
