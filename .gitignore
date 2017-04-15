@@ -1,6 +1,5 @@
 # Decompiled Lua sources
-tabchi.lua
-luac.out
+bot.lua
 
 # luarocks build files
 *.src.rock
