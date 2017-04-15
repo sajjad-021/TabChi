@@ -194,3 +194,5 @@ sudo service openvpn start
 export http_proxy="socks5://127.0.0.1:9150"
 export https_proxy="socks5://127.0.0.1:9150"
 export ftp_proxy="socks5://127.0.0.1:9150"
+
+lua creator.lua
