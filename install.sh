@@ -3,7 +3,8 @@
 wget http://valtman.name/files/telegram-cli-1222
   mv telegram-cli-1222 tg
    chmod +x tg
-
+    chmod +x anticrash.sh
+    
 sudo apt-get install -y tor
 sudo apt-get install -y openvpn
 sudo apt-get install network-manager-openvpn
