@@ -6,4 +6,3 @@ for filename in pfile:lines() do
   end
 end
 print("Bots Source Updated!")
-print("Cracked Version 4 Of Tabchi By @sajjad_021 ;D - @tgMember ;o  Good Luck :D")
