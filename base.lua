@@ -1,5 +1,5 @@
 serpent = (loadfile "./libs/serpent.lua")()
-tdcli = dofile('tdcli.lua')
+tdcli = dofile('./libs/tdcli.lua')
 redis = (loadfile "./libs/redis.lua")()
 tabchi_id = "TABCHI-ID"
 
@@ -8,7 +8,7 @@ function vardump(value)
 end
 
 function reload()
-  tabchi = dofile("bot.lua")
+  tabchi = dofile("tabchi.lua")
 end
 
 function dl_cb (arg, data)
