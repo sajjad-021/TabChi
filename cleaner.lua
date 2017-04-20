@@ -1,4 +1,4 @@
-redis = (loadfile "redis.lua")()
+redis = (loadfile "./libs/redis.lua")()
 io.write("Enter Tabchi ID : ")
 local last = io.read()
 io.popen('rm -rf ~/.telegram-cli/tabchi-'..last..' tabchi-'..last..'.lua tabchi-'..last..'.sh tabchi_'..last..'_logs.txt')
