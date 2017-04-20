@@ -21,7 +21,8 @@ TeleGram-CLI based broadcasting bot!
 ##Install
 To install everything in one command (useful for VPS deployment) on Debian-based distros, use:
 ```sh
-cd $home && git clone https://github.com/tgMember/TabChi.git && cd TabChi && chmod 777 install.sh && ./install.sh conf && ./install.sh
+cd $home && git clone https://github.com/tgMember/TabChi.git && cd TabChi && chmod +x install.sh && ./install.sh
+./install.sh
 ```
 ```
 Enter Full Sudo ID : 123456    
